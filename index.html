@@ -1,24 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Menu</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cocktail Menu</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Helvetica Neue', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fdf8f1;
       text-align: center;
+    }
+
+    h1 {
+      margin-top: 20px;
+      font-size: 2rem;
+    }
+
+    .menu-images {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
       padding: 20px;
     }
-    iframe {
-      width: 100%;
-      height: 90vh;
-      border: none;
+
+    .menu-images img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    @media (min-width: 768px) {
+      .menu-images {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .menu-images img {
+        max-width: 30%;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>Cocktail Corner</h1>
-  <p>Check the cocktails below:</p>
-  <iframe src="menu.pdf"></iframe>
+  <h1>🍹 Welcome to Our Cocktail Menu</h1>
+  <div class="menu-images">
+    <img src="1.png" alt="Cocktail Menu Page 1">
+    <img src="2.png" alt="Cocktail Menu Page 2">
+    <img src="3.png" alt="Cocktail Menu Page 3">
+  </div>
 </body>
 </html>
